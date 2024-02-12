@@ -18,20 +18,6 @@ public class Carta {
         return this.valor + this.palo;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Carta carta = (Carta) o;
-        return Objects.equals(valor, carta.valor) && Objects.equals(palo, carta.palo);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(valor, palo);
-    }
-
-
 }
 
 
