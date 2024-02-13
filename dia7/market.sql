@@ -128,7 +128,7 @@ ORDER BY
 
 -- Montos de facturas ordenados según totales
 SELECT 
-    fd.id, 
+    fd.factura_id,
     TO_CHAR(SUM(fd.cantidad * p.precio), '999,999,999,999.99') AS "Total" 
 FROM 
     factura f 
@@ -137,14 +137,14 @@ JOIN
 JOIN 
     producto p ON p.id = fd.producto_id
 GROUP BY 
-    fd.id
+    fd.factura_id
 ORDER BY 
     SUM(fd.cantidad * p.precio) DESC;
 
 -- Mostrar el IVA del 10% de los montos totales de facturas 
 -- (suponer que todos los productos tienen IVA del 10%)
 SELECT 
-    fd.id, 
+    fd.factura_id, 
     TO_CHAR(SUM(fd.cantidad * p.precio), '999,999,999,999.99') AS "Total",
     TO_CHAR(SUM(fd.cantidad * p.precio) * 0.10, '999,999,999,999.99') AS "IVA"
 FROM 
@@ -154,6 +154,6 @@ JOIN
 JOIN 
     producto p ON p.id = fd.producto_id
 GROUP BY 
-    fd.id
+    fd.factura_id
 ORDER BY 
     SUM(fd.cantidad * p.precio) DESC;
