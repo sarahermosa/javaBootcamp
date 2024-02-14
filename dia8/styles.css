@@ -1,0 +1,54 @@
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #333; /* Color del borde */
+}
+  
+  .image {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+
+
+  /*resaltar el borde*/
+  .image:hover {
+    border: 6px solid rgb(34, 92, 126);
+    transition: margin-top 0.50s; /* Movemos la imagen hacia arriba */  
+    margin-top: -50px; 
+  }
+
+
+  .image:hover + .image,
+  .image:hover + .image + .image,
+  .image:hover + .image + .image + .image,
+  .image:hover + .image + .image + .image + .image {
+   display: none;
+  }
+  
+  .image1 {
+    top: 0;
+    left: 0;
+  }
+  
+  .image2 {
+    top: 100px;
+    left: 100px;
+  }
+  
+  .image3 {
+    top: 200px;
+    left: 200px;
+  }
+  
+  .image4 {
+    top: 300px;
+    left: 300px;
+  }
+  
+  .image5 {
+    top: 400px;
+    left: 400px;
+  }
+  
