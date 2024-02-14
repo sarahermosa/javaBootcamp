@@ -1,0 +1,81 @@
+/* Estilos para la tabla */
+.points-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  .points-table th,
+  .points-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .points-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para las imágenes */
+  .points-table td img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  
+  /* Estilos para las filas */
+  .points-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .points-table tbody tr:hover {
+    background-color: #f2f2f2;
+    text-align: start;
+  }
+  
+  /* Estilos para la tabla responsive */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  /* Estilos para los contenedores */
+  .main-container {
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .table-container {
+    text-align: center;
+  }
+  
+  .title {
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    text-align: left;
+    height: 300px;
+    width: 300px;
+  }
+
+  .club {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .imagenes-container {
+    display: flex;
+    align-items: right;
+  }
+  
+  .imagenes-container img {
+    margin-right: 10px; 
+  }
+  
+  
