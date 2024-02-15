@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ta Te Ti</title>
+    <link rel="stylesheet" href="styles-tateti.css">
+  </head>
+  <body>
+    <h1>Juego TATETI en JavaScript</h1>
+
+    <div>
+        <section id="first_section" class="first_section">
+            <input type="text" placeholder="Nombre del primer Jugador" id="jugadoruno"><br>
+        </section>
+        <p></p>
+        <section id="second_section" class="second_section">
+            <input type="text" placeholder="Nombre del segundo Jugador" id="jugadordos">
+        </section>
+        
+        <br>
+
+        <section id="button">
+            <button class="button button2"> Jugar </button>
+            <button class="button button2" onclick="nuevoJuego()"> Nuevo Juego </button>
+        </section>
+
+        <br>
+
+        <div>
+        </div>
+
+    </div>
+
+
+
+    <div id="board">
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+      <div class="cells"></div>
+    </div>
+
+    <script>
+
+        var btn = document.querySelector("button");
+        var jugadores = [];
+
+        btn.addEventListener("click", function(){
+            var player1 = document.getElementById("jugadoruno");
+            var player2 = document.getElementById("jugadordos");
+            
+            if (player1.value != "" && player2.value != "") {
+                jugadores = [];
+                jugadores.push(player1.value);
+                jugadores.push(player2.value);
+                alert(player1.value + " es la X. \n"+player2.value+ " es la O.");
+                return jugadores;
+            } else {
+                alert("Ingresa los nombres de los jugadores");
+            }
+            
+        });
+
+        const cells = document.querySelectorAll(".cells");
+        const winConditions = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+            ];
+
+        let currentPlayer = "X";
+        let gameEnd = false;
+
+
+        cells.forEach(cell => {
+            cell.addEventListener("click", () => {
+
+            if (gameEnd) {
+                return;
+            }
+            if (cell.textContent === "") {
+                cell.textContent = currentPlayer;
+                if (checkWin()) {
+                    gameEnd = true;
+                    if (currentPlayer === "X")
+                        alert(`${jugadores[0]} es el ganador!`);
+                    else
+                        alert(`${jugadores[1]} es el ganador!`);
+                } else if (checkTie()) {
+                    gameEnd = true;
+                    alert("Excelente juego, es un empate!");
+                } else {
+                    currentPlayer = currentPlayer === "X" ? "O" : "X";
+                }
+            }
+            });
+        });
+
+        function checkWin() {
+            return winConditions.some(condition => {
+                return condition.every(index => {
+                    return cells[index].textContent === currentPlayer;
+                }); 
+            });
+        }
+
+        function checkTie() {
+            if (Array.from(cells).every(cell => cell.textContent !== "")) {
+                if (!checkWin()) {
+                    return true; 
+                }
+            }
+            return false;
+        }   
+
+        function nuevoJuego(){
+            cells.forEach(cell => {
+                cell.textContent = "";
+            });
+            gameEnd = false;
+        }
+
+    </script>
+  </body>
+</html>
