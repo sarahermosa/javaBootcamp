@@ -1,0 +1,77 @@
+<!doctype html>
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">  
+
+    <script>
+    function calcula(numero) {
+      if (numero === ".") {
+        if (!document.calc.resultado.value.includes(".")) {
+          document.calc.resultado.value += numero;
+        }
+      } else {
+          document.calc.resultado.value += numero;
+      }
+    }
+
+    function borrar() {
+      document.calc.resultado.value = "";
+    }
+
+    function realizaOperacion() {
+      var expresion = document.calc.resultado.value;
+      if (expresion) {
+        try {
+          var resultado = eval(expresion);
+          document.calc.resultado.value = resultado.toFixed(2); // Redondear a 2 decimales
+        } catch (error) {
+          document.calc.resultado.value = "Error";
+        }
+      }
+    }
+
+    </script>
+
+  </head>
+  
+  <body>
+    <form name="calc">
+      <table>
+        <tr>
+            <input type="text" name="resultado" value="" size="50" readonly style="width: 100%; font-size: 20px;">
+        </tr>
+        <tr>
+          <td><input class="button" value="7" onclick="calcula('7')" readonly></td>
+          <td><input class="button" value="8" onclick="calcula('8')" readonly></td>
+          <td><input class="button" value="9" onclick="calcula('9')" readonly></td>
+          <td><input class="button" value="+" onclick="calcula('+')" readonly></td>
+        </tr>
+        <tr>
+          <td><input class="button" value="4" onclick="calcula('4')" readonly></td>
+          <td><input class="button" value="5" onclick="calcula('5')" readonly></td>
+          <td><input class="button" value="6" onclick="calcula('6')" readonly></td>
+          <td><input class="button" value="-" onclick="calcula('-')" readonly></td>
+        </tr>
+        <tr>
+          <td><input class="button" value="1" onclick="calcula('1')" readonly></td>
+          <td><input class="button" value="2" onclick="calcula('2')" readonly></td>
+          <td><input class="button" value="3" onclick="calcula('3')" readonly></td>
+          <td><input class="button" value="*" onclick="calcula('*')" readonly></td>
+        </tr>
+        <tr>
+          <td><input class="button" value="0" onclick="calcula('0')" readonly></td>
+          <td><input class="button" value="." onclick="calcula('.')" readonly></td>
+          <td><input class="button" value="C" onclick="borrar()" readonly></td>
+          <td><input class="button" value="/" onclick="calcula('/')" readonly></td>
+          <td><input class="button" value="=" onclick="realizaOperacion()" readonly></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+
+
