@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles-form.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+    <link href="https://db.onlinewebfonts.com/c/12108809f49c49bcdc126dcecc938761?family=Nexa+Light" rel="stylesheet">
+</head>
+  <body>
+    <div class="container">
+        <form class="row g-3">
+            <div class="col-md-12">
+              <label for="CuentaCreditoSelector" class="form-label">Cuenta Crédito</label>
+              <select id="CuentaCreditoSelector" class="form-select">
+                <option selected>Elegir Contacto</option>
+                <option>81-12343 Sara Hermosa</option>
+                <option>1232323 Juan Perez</option>
+              </select>            
+            </div>
+            <div class="col-md-5">
+              <label for="inputCuentaCredito" class="form-label">Número de Cuenta</label>
+              <input type="text" class="form-control" id="inputCuentaCredito">
+            </div>
+            <div class="col-md-1">
+              <label for="guardarCheckbox" class="form-check-label">Guardar <br>
+                <input type="checkbox" class="form-check-input" id="guardarCheckbox">
+              </label>
+            </div>
+            <div class="col-md-6">
+              <label for="inputAlias" class="form-label">Alias</label>
+              <input type="text" class="form-control" id="inputAlias" placeholder="Guardar Contacto">
+            </div>
+            <div class="col-md-6">
+              <label for="inputBanco" class="form-label">Banco</label>
+              <select id="inputBanco" class="form-select">
+                <option selected>Seleccionar</option>
+                <option>Banco Familiar</option>
+                <option>Banco Itaú</option>
+                <option>Ueno Bank</option>
+                <option>Banco Sudameris</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+                <label for="inputDenominacion" class="form-label">Denominacion</label>
+                <input type="text" class="form-control" id="inputDenominacion">
+            </div>
+            <div class="col-md-6">
+                <label for="inputTipoDocumento" class="form-label">Tipo de Documento</label>
+                <select id="inputTipoDocumento" class="form-select">
+                    <option value="0" selected>Seleccionar</option>
+                    <option value="1">RUC</option>
+                    <option value="2">Cedula de Identidad</option>
+                    <option value="3">Pasaporte</option>
+                  </select>            
+            </div>
+            <div class="col-md-6">
+                  <label for="numerodocumento" class="form-label">Número de Documento</label>
+                  <input type="text" class="form-control" id="numerodocumento">
+            </div>
+            <div class="col-md-12">
+                <label for="inputDomicilio" class="form-label">Domicilio</label>
+                <input type="text" class="form-control" id="inputDomicilio">
+            </div>
+            <div class="col-md-12">
+                <label for="inputLocalidad" class="form-label">Localidad</label>
+                <input type="text" class="form-control" id="inputLocalidad">
+            </div>
+          </form>
+
+          <script type="text/javascript" src="validations.js"></script>
+
+
+    </div>
+    </body>
+</html>

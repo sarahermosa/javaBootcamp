@@ -1,0 +1,33 @@
+input[type="checkbox"] { 
+    width: 2em; 
+    height: 1.9em; 
+    border-width: 1mm;
+    border-color: #bdbdbd;
+    align-content: center;
+}
+
+input[type="checkbox"]:checked{
+    background-color: #B18F30;
+    border-color: #B18F30;
+}
+
+
+input[type="text"] {
+    border: none; /* Elimina el borde */
+    border-bottom: 1px solid rgb(184, 184, 184); /* Agrega un borde inferior */
+    border-radius: 0%;
+    outline: none; /* Elimina el borde de enfoque */
+    padding: 5px; /* Añade un poco de espacio alrededor del texto */
+  }
+
+  .form-label,
+  .form-check-label {
+    color: #B18F30;
+    font-family: "Nexa Light";
+    font-size: 22px;
+}
+
+.form-select{
+    background-image: url('/img/arrow-down-filled-triangle-svgrepo-com.svg');
+}
+
