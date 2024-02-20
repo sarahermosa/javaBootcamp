@@ -1,0 +1,9 @@
+.table-dark th,
+.table-dark tr,
+    tr td {
+    text-align: center;
+  }
+
+  .resumen{
+    text-align: left;
+  }

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabla de versiones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <link rel="stylesheet" href="/styles.css">  
+
+
+</head>
+
+<body>
+
+<table class="table table-striped table-hover">
+    <thead class="thead-light">
+      <tr class="table-dark">
+        <th scope="col">Versión</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Resumen</th>
+        <th scope="col">Archivos</th>
+        <th scope="col">Detalles</th>
+        <th scope="col">Configuración</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1.6.1</th>
+        <td>19/02/24</td>
+        <td class="resumen">Funcionalidades para empresas: carga de archivos para pago de salarios y esquema de autorizaciones</td>
+        <td>
+            <div class="accordion" id="archivoAccordion">
+                <button type="button" class="btn btn-outline-primary ver-archivos" data-bs-toggle="collapse" data-bs-target="#archivoCollapse" aria-expanded="false" aria-controls="archivoCollapse">
+                    Ver Archivos
+                </button>
+            </div>
+        </td>
+        <td>
+            <div class="accordion" id="detalleAccordion">
+                <button type="button" class="btn btn-outline-primary ver-detalles" data-bs-toggle="collapse" data-bs-target="#detalleCollapse" aria-expanded="false" aria-controls="detalleCollapse">
+                    Ver Detalles
+                </button>
+            </div>        
+        </td>
+        <td>
+            <div class="accordion" id="confAccordion">
+                <button type="button" class="btn btn-outline-primary ver-configuraciones" data-bs-toggle="collapse" data-bs-target="#confCollapse" aria-expanded="false" aria-controls="confCollapse">
+                    Ver Configuraciones
+                </button>
+            </div>          
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">2.1.0</th>
+        <td>25/02/24</td>
+        <td class="resumen">Pagos de servicios: se agrega el flujo completo para transacciones del tipo pago de servicios</td>
+        <td>
+            <div class="accordion" id="archivoAccordion">
+                <button type="button" class="btn btn-outline-primary ver-archivos" data-bs-toggle="collapse" data-bs-target="#archivoCollapse" aria-expanded="false" aria-controls="archivoCollapse">
+                    Ver Archivos
+                </button>
+            </div>        
+        </td>
+        <td>
+            <div class="accordion" id="detalleAccordion">
+                <button type="button" class="btn btn-outline-primary ver-detalles" data-bs-toggle="collapse" data-bs-target="#detalleCollapse" aria-expanded="false" aria-controls="detalleCollapse">
+                    Ver Detalles
+                </button>
+            </div>  
+        </td>
+        <td>
+            <div class="accordion" id="confAccordion">
+                <button type="button" class="btn btn-outline-primary ver-configuraciones" data-bs-toggle="collapse" data-bs-target="#confCollapse" aria-expanded="false" aria-controls="confCollapse">
+                    Ver Configuraciones
+                </button>
+            </div>           </td>
+      </tr>
+      <tr>
+        <th scope="row">2.5.3</th>
+        <td>29/02/24</td>
+        <td class="resumen">Login: mejoras en las pantallas de login y seguridad con token</td>
+        <td>
+            <div class="accordion" id="archivoAccordion">
+                <button type="button" class="btn btn-outline-primary ver-archivos" data-bs-toggle="collapse" data-bs-target="#archivoCollapse" aria-expanded="false" aria-controls="archivoCollapse">
+                    Ver Archivos
+                </button>
+            </div>   
+        </td>
+        <td>
+            <div class="accordion" id="detalleAccordion">
+                <button type="button" class="btn btn-outline-primary ver-detalles" data-bs-toggle="collapse" data-bs-target="#detalleCollapse" aria-expanded="false" aria-controls="detalleCollapse">
+                    Ver Detalles
+                </button>
+            </div>          </td>
+        <td>
+            <div class="accordion" id="confAccordion">
+                <button type="button" class="btn btn-outline-primary ver-configuraciones" data-bs-toggle="collapse" data-bs-target="#confCollapse" aria-expanded="false" aria-controls="confCollapse">
+                    Ver Configuraciones
+                </button>
+            </div>           </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="collapse" id="archivoCollapse" aria-labelledby="archivoHeading" data-parent="#archivoAccordion">
+    <div class="card-body">
+        <h2 id="archivoHeading">Versión <span id="versionTitulo"></span></h2>
+        <h5 id="subtituloTitulo">Archivos</h5>
+        <div id="listaArchivos" class="accordion">
+        </div>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="collapse" id="detalleCollapse" aria-labelledby="detalleHeading" data-parent="#detalleAccordion">
+    <div class="card-body">
+        <h2 id="detalleHeading">Versión <span id="versionTituloDetalle"></span></h2>
+        <h5 id="subtituloTitulo">Detalles</h5>
+        <div id="listaDetalles" class="accordion">
+        </div>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="collapse" id="confCollapse" aria-labelledby="confHeading" data-parent="#confAccordion">
+    <div class="card-body">
+        <h2 id="confHeading">Versión <span id="versionTituloConf"></span></h2>
+        <h5 id="subtituloTitulo">Configuraciones</h5>
+        <div id="listaConf" class="accordion">
+        </div>
+      </ul>
+    </div>
+  </div>
+
+</body>
