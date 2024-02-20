@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 15px; 
+  }
+  
+  button {
+    margin-bottom: 15px;
+    align-self: flex-start; 
+  }
+
+.character-list {
+  margin: 25px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-gap: 15px;
+  width: 100%;
+  display: none;
+}
+
+.character-list.show {
+    display: grid;
+  }
+
+li {
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    background: #fff;
+    box-shadow: 0 0 10px hsl(0, 0%, 90%);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}  
+  
+img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
