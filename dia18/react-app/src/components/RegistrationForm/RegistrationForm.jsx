@@ -156,14 +156,17 @@ function RegistrationForm(props) {
                 >
                     Registrarse
                 </button>
+
+                <div className="mt-2">
+                    <span>Already have an account? </span>
+                    <span className="loginText" onClick={() => redirectToLogin()}>Login here</span> 
+                </div>
+
             </form>
             <div className="alert alert-success mt-2" style={{display: state.successMessage ? 'block' : 'none' }} role="alert">
                 {state.successMessage}
             </div>
-            <div className="mt-2">
-                <span>Already have an account? </span>
-                <span className="loginText" onClick={() => redirectToLogin()}>Login here</span> 
-            </div>
+
             
         </div>
     )

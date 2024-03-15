@@ -1,10 +1,59 @@
-.loginText {
-    color: #007bff;
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
     font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
     cursor: pointer;
-}
-
-.successMessage {
-    color: green;
-    font-weight: bold;
-}
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .alert {
+    margin-top: 10px;
+  }
+  
+  .registerMessage {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .loginText {
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .loginText:hover {
+    text-decoration: underline;
+  }
+  

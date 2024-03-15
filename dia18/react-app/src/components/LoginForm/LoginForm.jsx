@@ -83,15 +83,18 @@ function LoginForm(props) {
                         type="submit" 
                         className="btn btn-primary"
                         onClick={handleSubmitClick}
-                    >Submit</button>
+                    >Login</button>
+
+                <div className="registerMessage">
+                    <span>Dont have an account? </span>
+                    <span className="loginText" onClick={() => redirectToRegister()}>Register</span> 
+                </div>
+
             </form>
             <div className="alert alert-success mt-2" style={{display: state.successMessage ? 'block' : 'none' }} role="alert">
                 {state.successMessage}
             </div>
-            <div className="registerMessage">
-                <span>Dont have an account? </span>
-                <span className="loginText" onClick={() => redirectToRegister()}>Register</span> 
-            </div>
+
         </div>
     )
 }
